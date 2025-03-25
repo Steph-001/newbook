@@ -1,6 +1,24 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Newbook"
+
 [module]
-[[module.imports]]
-path = 'github.com/alex-shpak/hugo-book'
+  [[module.imports]]
+    path = "github.com/alex-shpak/hugo-book"
+  
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+
+[params]
+  # (Optional, default light) Sets color theme: light, dark or auto.
+  BookTheme = "light"
+  
+  # (Optional, default true) Controls table of contents visibility on right side of pages.
+  BookToC = true
+  
+  # (Optional, default docs) Specify section of content to render as menu
+  BookSection = "docs"
+  
+  # Enable search
+  BookSearch = true
